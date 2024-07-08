@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/frisson-card/static/css/main.3169b6bb.css",
+    "main.js": "/frisson-card/static/js/main.da099aad.js",
+    "static/media/MPLUS1p-ExtraBold.woff": "/frisson-card/static/media/MPLUS1p-ExtraBold.b4203bef29f470bb97e0.woff",
+    "static/media/MPLUS1p-Bold.woff": "/frisson-card/static/media/MPLUS1p-Bold.2c52bdcf74883024a4df.woff",
+    "static/media/MPLUS1p-Regular.woff": "/frisson-card/static/media/MPLUS1p-Regular.bb817cd1a4719088e4f3.woff",
+    "static/media/MPLUS1p-Medium.woff": "/frisson-card/static/media/MPLUS1p-Medium.585366b78033c4d421dc.woff",
+    "static/media/MPLUS1p-ExtraBold.woff2": "/frisson-card/static/media/MPLUS1p-ExtraBold.8304e739a00884bebbab.woff2",
+    "static/media/MPLUS1p-Bold.woff2": "/frisson-card/static/media/MPLUS1p-Bold.c6b338f00a64ae566fff.woff2",
+    "static/media/MPLUS1p-Medium.woff2": "/frisson-card/static/media/MPLUS1p-Medium.0024c2f5fd9611ea52fc.woff2",
+    "static/media/MPLUS1p-Regular.woff2": "/frisson-card/static/media/MPLUS1p-Regular.e8a9bdfe7627140ee874.woff2",
+    "static/media/photo.jpg": "/frisson-card/static/media/photo.c77adc6f17811ac63ce7.jpg",
+    "static/media/tag-frisson.svg": "/frisson-card/static/media/tag-frisson.ac210bc6017fd4afd64ee57eb18088bb.svg",
+    "static/media/footer-bg.svg": "/frisson-card/static/media/footer-bg.bcb640d249e6d7604e49.svg",
+    "static/media/logo-classic.svg": "/frisson-card/static/media/logo-classic.3afc730b5173a3a8da64983b40551272.svg",
+    "static/media/frisson-1.webp": "/frisson-card/static/media/frisson-1.379ece0eaa0438f2a0b0.webp",
+    "static/media/offer-1.webp": "/frisson-card/static/media/offer-1.1bfb1e3b57494bf4053d.webp",
+    "static/media/avatar_small.svg": "/frisson-card/static/media/avatar_small.e3f159617c56eb921dc1745bdeae3c16.svg",
+    "static/media/offer-2.webp": "/frisson-card/static/media/offer-2.abff5e822c646adc2f6c.webp",
+    "static/media/appstore.svg": "/frisson-card/static/media/appstore.e31b771299ac876099da6fffa6a4292a.svg",
+    "static/media/1.webp": "/frisson-card/static/media/1.969779ee8ca2052283dd.webp",
+    "static/media/2.webp": "/frisson-card/static/media/2.d7af33f4a0161766492c.webp",
+    "static/media/googleplay.svg": "/frisson-card/static/media/googleplay.d34fbc41465dff09d44b4be4dde7255c.svg",
+    "static/media/search.svg": "/frisson-card/static/media/search.a769b5bae4aa4cee0a91.svg",
+    "static/media/lightning.svg": "/frisson-card/static/media/lightning.a159593b88d5d94916148e8c64e00f21.svg",
+    "static/media/Info-circle.svg": "/frisson-card/static/media/Info-circle.de9cd819ced1ccce4a5d157fc3d337cc.svg",
+    "static/media/tag-new.svg": "/frisson-card/static/media/tag-new.9984ac2235e99936c5b1878d005819f1.svg",
+    "index.html": "/frisson-card/index.html",
+    "main.3169b6bb.css.map": "/frisson-card/static/css/main.3169b6bb.css.map",
+    "main.da099aad.js.map": "/frisson-card/static/js/main.da099aad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3169b6bb.css",
+    "static/js/main.da099aad.js"
+  ]
+}
