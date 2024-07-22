@@ -8,16 +8,28 @@ import imgInfo from '../images/Info-circle.svg';
 import imgLightning from '../images/lightning.svg';
 import Prices from './Prices/Prices';
 
-const Content = ( { footerRef } ) => {
+const Content = ( { footerRef, place } ) => {
+
+	const activityName = place.activity_type_id;
+	let workTime = [];
+
+	const parsedWorkTime = JSON.parse(place.work_time)
+	if (Array.isArray(parsedWorkTime)) {
+		workTime = parsedWorkTime
+	} else {
+		workTime.push(parsedWorkTime)
+	}
+
+	console.log(workTime)
 
 	return (
 		<div className="f-container__side f-container__side_content">
 
 			<QR classes='f-qr_header'/>
 			<Tag title="О месте" icon={ imgInfo }/>
-			<Title/>
+			<Title title={place.name} subTitle={place.address} rating={place.rating_average} count={place.rating_count} cost={place.price}/>
 			<Feedback/>
-			<Details/>
+			<Details description={place.description} activityName={activityName} feature={place.feature} workTime={workTime} address={place.address}/>
 			<Tag title="Услуги" icon={ imgLightning }/>
 			<Offer footerRef={ footerRef }/>
 			<Prices/>

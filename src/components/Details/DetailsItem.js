@@ -12,7 +12,7 @@ const DetailsItem = ( { title, description, button } ) => {
 				}
 			</div>
 			<div className="f-detail__description-container">
-				<div className="f-detail__description">{ parse( description ) }</div>
+				<div className="f-detail__description">{  description }</div>
 			</div>
 			{button && button.link && button.name &&
 			<div className="f-detail__button-container">
