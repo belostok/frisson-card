@@ -1,47 +1,24 @@
-import { useRef, useState } from 'react';
-import Content from './components/Content';
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
-import GalleryPopup from './components/GalleryPopup';
+import {useEffect, useState} from 'react';
 import './App.scss';
-import { isMobile } from './helpers/helpers';
+import PlaceCard from "./pages/PlaceCard";
+import {getPlaceByID} from "./api";
+import {useParams} from "react-router-dom";
 
 function App() {
-	const footerRef = useRef( null );
+	let params = useParams();
 
-	const [ isPopupOpen, setIsPopupOpen ]           = useState( false );
-	const [ activeSlideIndex, setActiveSlideIndex ] = useState( 0 );
+	const [place, setPlace] = useState(null);
 
-	const handleSlideClick = ( index ) => {
-		setActiveSlideIndex( index );
-		setIsPopupOpen( true );
-	};
+	useEffect(() => {
+		const fetchPlace = async () => {
+			const result = await getPlaceByID(params.id);
+			setPlace(result);
+		};
 
-	const closePopup = () => {
-		setIsPopupOpen( false );
-	};
+		fetchPlace();
+	}, []);
 
-	return (
-		<>
-			<main className="f-main f-outer">
-				<div className="f-wrapper">
-					<div className="f-container flex jcspb">
-						<Content footerRef={ footerRef }/>
-						<Gallery onSlideClick={ handleSlideClick }/>
-					</div>
-				</div>
-			</main>
-
-			<Footer ref={ footerRef }/>
-
-			{ isPopupOpen && isMobile &&
-				<GalleryPopup
-					activeSlideIndex={ activeSlideIndex }
-					onClose={ closePopup }
-				/>
-			}
-		</>
-	);
+	return (<PlaceCard place={place}/>);
 }
 
 export default App;
