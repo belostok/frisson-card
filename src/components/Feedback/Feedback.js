@@ -2,10 +2,10 @@ import FeedbackItem from './FeedbackItem';
 import imgFrisson from '../../images/avatar_small.svg';
 import imgUser from '../../images/user-avatar.png';
 import imgNoFeedback from '../../images/no-feedback.svg';
+import {urlForImageId} from "../../api";
 
-const Feedback = () => {
-
-	const items = [
+const Feedback = ({ reviews = [] }) => {
+	/*const items = [
 		// {
 		// 	id: 'feed1',
 		// 	image: imgFrisson,
@@ -20,17 +20,17 @@ const Feedback = () => {
 		// 	date: '3 дня назад',
 		// 	feedback: 'Внезапно, некоторые особенности внутренней политики освещают чрезвычайно интересные картины в целом, однако конкретные меры принимать мы не можем'
 		// }
-	];
+	];*/
 
 	return (
 		<div className="f-feedback">
 			<div className="f-feedback__title-container">
 				<h2 className="f-feedback__title f-heading-2">Отзывы</h2>
 			</div>
-			{ items?.length ?
+			{ reviews?.length ?
 				<>
 					<div className="f-feedback__items flex fdc">
-						{ items.map( ( item ) => (
+						{ reviews.map( ( item ) => (
 							<FeedbackItem
 								key={ item.id }
 								image={ item.image }
@@ -42,7 +42,7 @@ const Feedback = () => {
 						}
 					</div>
 					<div className="f-feedback__more-container flex">
-						<span className="f-feedback__more">И ещё 16 отзывов в приложении Frisson.</span>
+						<span className="f-feedback__more">Больше отзывов в приложении Frisson.</span>
 						<a href="#" className="f-feedback__more-link f-hover">Посмотреть</a>
 					</div>
 				</> :

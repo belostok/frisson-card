@@ -13,7 +13,7 @@ const PricesItem = ( { time, description, price } ) => {
 				}
 			</div>
 			<div className="f-prices-item__price-container">
-				<span className="f-prices-item__price">{ price } ₽</span>
+				<span className="f-prices-item__price">{ price }</span>
 			</div>
 		</div>
 	);

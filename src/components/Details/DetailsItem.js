@@ -1,4 +1,3 @@
-import parse from 'html-react-parser';
 import cn from 'classnames';
 
 const DetailsItem = ( { title, description, button } ) => {
@@ -12,11 +11,11 @@ const DetailsItem = ( { title, description, button } ) => {
 				}
 			</div>
 			<div className="f-detail__description-container">
-				<div className="f-detail__description">{ parse( description ) }</div>
+				<div className="f-detail__description">{  description }</div>
 			</div>
 			{button && button.link && button.name &&
 			<div className="f-detail__button-container">
-				<a href={ button.link } className="f-button f-detail__button flex aic jcc">
+				<a href={ button.link } target={'_blank'} className="f-button f-detail__button flex aic jcc">
 					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fillRule="evenodd" clipRule="evenodd"
 							d="M18.4999 2.6998C17.195 2.6998 15.9593 3.48668 15.4496 4.69307C14.9861 5.79028 15.2091 6.69661 15.7847 7.57744C16.294 8.35676 17.0355 9.05265 17.8046 9.77432C17.957 9.9174 18.1106 10.0615 18.2636 10.2074C18.3249 10.2653 18.4094 10.2998 18.4999 10.2998C18.5907 10.2998 18.6754 10.2651 18.7367 10.207C18.8799 10.0711 19.0236 9.93678 19.1665 9.80322C19.9465 9.07391 20.7009 8.36852 21.2158 7.57892C21.7909 6.69685 22.0131 5.78882 21.5502 4.69307C21.0405 3.48668 19.8047 2.6998 18.4999 2.6998ZM14.16 4.14824C14.8976 2.40217 16.6559 1.2998 18.4999 1.2998C20.3438 1.2998 22.1022 2.40217 22.8398 4.14824C23.5289 5.77931 23.1474 7.1796 22.3885 8.34356C21.7719 9.28929 20.8695 10.1305 20.0944 10.8532C19.9582 10.9801 19.826 11.1034 19.7 11.2229C19.3758 11.5302 18.9453 11.6998 18.4999 11.6998C18.0545 11.6998 17.624 11.5302 17.2999 11.2229L17.2983 11.2215C17.1655 11.0947 17.0256 10.9638 16.8813 10.8289C16.1138 10.1108 15.2231 9.27726 14.6128 8.34327C13.8529 7.18038 13.4701 5.78129 14.16 4.14824Z"

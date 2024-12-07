@@ -10,8 +10,8 @@ const QR = ( { classes } ) => {
 	return (
 		<div className={ cn( 'f-qr', classes ) }>
 			<div className='f-qr__items flex fwrap'>
-				<QRItem qr={appStoreQR} store={appStore} />
-				<QRItem qr={googlePlayQR} store={googlePlay} />
+				<QRItem qr={appStoreQR} store={appStore} link={'https://apps.apple.com/app/id1572292524'}/>
+				<QRItem qr={googlePlayQR} store={googlePlay} link={'https://play.google.com/store/apps/details?id=com.frissonmobile'}/>
 			</div>
 		</div>
 	);

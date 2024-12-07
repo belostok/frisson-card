@@ -2,7 +2,7 @@
   "name": "frisson-card-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://belostok.github.io/frisson-card",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +12,7 @@
     "html-react-parser": "^5.1.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "sass": "^1.77.6",
     "swiper": "^11.1.4",
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  	"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import imgSlide from '../images/frisson-1.webp';
 
-const Gallery = ( { onSlideClick } ) => {
+const Gallery = ( { onSlideClick, images = [] } ) => {
+
 
 	return (
 		<div className="f-container__side f-container__side_gallery">
@@ -22,13 +22,13 @@ const Gallery = ( { onSlideClick } ) => {
 						el: '.f-gallery__pagination',
 					} }
 				>
-					{ [ ...Array( 10 ) ].map( ( _, index ) => (
+					{ images.map( ( v, index ) => (
 						<SwiperSlide key={ `g${ index }` }>
 							<div
 								className="f-gallery__item img-cover"
 								onClick={ () => onSlideClick( index ) }
 							>
-								<img src={ imgSlide } alt=""/>
+								<img src={ v } alt=""/>
 							</div>
 						</SwiperSlide>
 					) ) }

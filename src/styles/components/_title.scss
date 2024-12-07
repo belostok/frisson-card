@@ -40,6 +40,18 @@
 		column-gap: inEm(40px);
 	}
 
+	&__rate-zero {
+    		color: $blue;
+    		font-size: 13px;
+    		line-height: normal;
+
+    		&-icon-container {
+    			margin-right: inEm(4px);
+    			width: inEm(16px);
+    			height: inEm(16px);
+    		}
+    	}
+
 	&__rating {
 		color: $orange;
 		font-size: 13px;

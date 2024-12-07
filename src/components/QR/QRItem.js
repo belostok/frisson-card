@@ -1,7 +1,7 @@
-const QRItem = ( { qr, store } ) => {
+const QRItem = ( { qr, store, link } ) => {
 
 	return (
-		<div className="f-qr__item">
+		<div className="f-qr__item" onClick={() => window.open(link, "_blank")}>
 			<div className="f-qr__code-container img-contain">
 				<img src={ qr } alt="" className="f-qr__code"/>
 			</div>

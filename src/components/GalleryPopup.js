@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import cn from 'classnames';
-import imgSlide from '../images/frisson-1.webp';
-import imgTest from '../images/photo.jpg';
 
-const GalleryPopup = ( { activeSlideIndex, onClose } ) => {
+const GalleryPopup = ( { activeSlideIndex, onClose, images } ) => {
 	const [ swiperInstance, setSwiperInstance ] = useState( null );
 	const [ activeIndex, setActiveIndex ]       = useState( activeSlideIndex );
 
@@ -53,10 +51,10 @@ const GalleryPopup = ( { activeSlideIndex, onClose } ) => {
 						onSwiper={ setSwiperInstance }
 						initialSlide={ activeSlideIndex }
 					>
-						{ [ ...Array( 10 ) ].map( ( _, index ) => (
+						{ images.map( ( imageUrl, index ) => (
 							<SwiperSlide key={ `g${ index }` }>
 								<div className="f-gallery-popup__item">
-									<img className="f-gallery-popup__image" src={ index === 1 ? imgTest : imgSlide } alt=""/>
+									<img className="f-gallery-popup__image" src={ imageUrl } alt=""/>
 								</div>
 							</SwiperSlide>
 						) ) }
@@ -64,14 +62,14 @@ const GalleryPopup = ( { activeSlideIndex, onClose } ) => {
 				</div>
 
 				<div className="f-gallery-popup__thumbs-container">
-					{ [ ...Array( 10 ) ].map( ( _, index ) => (
+					{ images.map( ( imageUrl, index ) => (
 						<div
 							key={ `p${ index }` }
 							className={ cn( 'f-gallery-popup__thumbs-item', 'img-cover', activeIndex === index ? 'f-gallery-popup__thumbs-item_active' : '' ) }
 							onClick={ () => handleThumbnailClick( index ) }
 							style={ { cursor: 'pointer' } }
 						>
-							<img className="f-gallery-popup__preview-image" src={ index === 1 ? imgTest : imgSlide } alt=""/>
+							<img className="f-gallery-popup__preview-image" src={ imageUrl } alt=""/>
 						</div>
 					) ) }
 				</div>
